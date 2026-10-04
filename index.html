@@ -172,6 +172,28 @@
   :focus-visible { outline: 3px solid rgba(81, 112, 255, 0.45); outline-offset: 1px; }
   .community a:focus-visible, .community .x:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
   @media (max-width: 560px) { .community { font-size: 14px; } .community .long { display: none; } .community .inner { justify-content: flex-start; text-align: left; } }
+  /* Reading: for people not ready to share a profile */
+  .reading { border-top: 1px solid var(--line); padding: 68px 0; }
+  .reading-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: end; margin-bottom: 26px; }
+  @media (max-width: 760px) { .reading-head { grid-template-columns: 1fr; } }
+  .reading-head h2 { margin: 0 0 10px; font-size: clamp(28px, 3.6vw, 40px); letter-spacing: -0.035em; line-height: 1.08; font-weight: 700; }
+  .reading-head p { margin: 0; color: var(--muted); max-width: 56ch; }
+  .btn-news { display: inline-block; background: var(--ink); color: #fff; text-decoration: none; font-weight: 600; border-radius: 12px; padding: 13px 18px; white-space: nowrap; }
+  .btn-news:hover { background: #000; }
+  .guides { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 860px) { .guides { grid-template-columns: 1fr; } }
+  .guide { display: block; text-decoration: none; color: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 20px; background: var(--bg); }
+  .guide:hover { border-color: var(--daruma); }
+  .guide strong { display: block; font-size: 18px; letter-spacing: -0.015em; line-height: 1.25; margin-bottom: 6px; }
+  .guide span { color: var(--muted); font-size: 15px; }
+
+  /* Reading list inside the thank-you state */
+  .next-reads { margin-top: 22px; display: grid; gap: 8px; }
+  .next-reads p.lbl { font-size: 14px; color: var(--muted); margin: 0 0 2px; }
+  .next-read { display: block; text-decoration: none; color: var(--ink); background: var(--wash); border-radius: 12px; padding: 12px 14px; }
+  .next-read:hover { background: #E3E9FF; }
+  .next-read strong { display: block; font-size: 16px; }
+  .next-read span { font-size: 14px; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -376,12 +398,34 @@
         <h2>Profile sent.</h2>
         <p>We'll introduce you to recruitment partners who work with teams in your field. They'll email you when a role fits.</p>
         <p class="note">In Japan, people paint one eye on a daruma when they set a goal, and the other when it comes true. We just painted the second one for you.</p>
+        <div class="next-reads">
+          <p class="lbl">While you wait</p>
+          <a class="next-read" href="https://japantechcareerhubs-newsletter.beehiiv.com/p/the-complete-guide-to-landing-a-tech-job-in-japan-2026-edition?utm_source=lp&utm_medium=referral" target="_blank" rel="noopener"><strong>The complete guide to landing a tech job in Japan</strong><span>Visa routes, salary data, and how to spot English-first teams.</span></a>
+          <a class="next-read" href="https://japantechcareerhubs-newsletter.beehiiv.com/p/india-to-japan-tech-job-guide-2026?utm_source=lp&utm_medium=referral" target="_blank" rel="noopener"><strong>From India to a tech job in Japan</strong><span>The full sequence, from shortlisting companies to the visa paperwork.</span></a>
+          <a class="next-read" href="https://japantechcareerhubs-newsletter.beehiiv.com/p/take-home-pay-japan-engineers-2026?utm_source=lp&utm_medium=referral" target="_blank" rel="noopener"><strong>What you actually take home in Japan</strong><span>Tax, social insurance, and monthly pay at three salary levels.</span></a>
+          <a class="next-read" href="https://japantechcareerhubs-newsletter.beehiiv.com/?utm_source=lp&utm_medium=referral" target="_blank" rel="noopener"><strong>The weekly newsletter</strong><span>Every Wednesday: 3 Japanese tech companies where engineers work in English.</span></a>
+        </div>
       </div>
     </form>
   </div>
 </div>
 
 <div class="wrap">
+  <section class="reading">
+    <div class="reading-head">
+      <div>
+        <h2>Not ready to share a profile yet?</h2>
+        <p>Start with the guides. And every Wednesday, the newsletter brings you 3 Japanese tech companies where engineers work in English. Free.</p>
+      </div>
+      <a class="btn-news" href="https://japantechcareerhubs-newsletter.beehiiv.com/?utm_source=lp&utm_medium=referral" target="_blank" rel="noopener">Get the newsletter</a>
+    </div>
+    <div class="guides">
+          <a class="guide" href="https://japantechcareerhubs-newsletter.beehiiv.com/p/the-complete-guide-to-landing-a-tech-job-in-japan-2026-edition?utm_source=lp&utm_medium=referral" target="_blank" rel="noopener"><strong>The complete guide to landing a tech job in Japan</strong><span>Visa routes, salary data, and how to spot English-first teams.</span></a>
+          <a class="guide" href="https://japantechcareerhubs-newsletter.beehiiv.com/p/india-to-japan-tech-job-guide-2026?utm_source=lp&utm_medium=referral" target="_blank" rel="noopener"><strong>From India to a tech job in Japan</strong><span>The full sequence, from shortlisting companies to the visa paperwork.</span></a>
+          <a class="guide" href="https://japantechcareerhubs-newsletter.beehiiv.com/p/take-home-pay-japan-engineers-2026?utm_source=lp&utm_medium=referral" target="_blank" rel="noopener"><strong>What you actually take home in Japan</strong><span>Tax, social insurance, and monthly pay at three salary levels.</span></a>
+    </div>
+  </section>
+
   <section class="block">
     <h2>How it works</h2>
     <ol class="steps">
